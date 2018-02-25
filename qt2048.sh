@@ -28,7 +28,7 @@ if [ -n "$CERTS" ]; then
         P="$(cat $CERTS/aosp/password)"
 
         $QT_DIR_PATH/androiddeployqt --output android --verbose --input *.json --sign $CERTS/aosp/fmo.jks apps --storepass $P
-	cp -f android/bin/QtApp-debug.apk $PRODUCT_OUT_PATH/2048-release.apk
+	cp -f android/bin/QtApp-release.apk $PRODUCT_OUT_PATH/2048-release.apk
  
 else
         echo "INFO: Building in Debug Mode"
