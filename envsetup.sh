@@ -164,7 +164,6 @@ function set_sdkpath()
 		read ANDROID_SDK_ROOT
 		# TODO: validate the SDK path
 	fi
-
 	echo "SDK:$ANDROID_SDK_ROOT"
 	export ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT
 }
@@ -173,11 +172,15 @@ function set_qtpath()
 {
 # qt path
 	if [ -z "$QT_DIR_PATH" ] ; then
+		[ -d /opt/Qt ] && QT_DIR_PATH=/opt/Qt/[0-9]*/android_armv7/bin
+		[ -d ~/Qt ] && QT_DIR_PATH=$(realpath ~/Qt/[0-9]*/android_armv7/bin)
+        fi
+	if [ -z "$QT_DIR_PATH" ] ; then
 		echo "Enter Qt Android path: (eg: /home/user/Qt/5.10.1/android_armv7/bin)"
 		read QT_DIR_PATH
 		# TODO: validate the Qt path
 	fi
-	echo "NDK:$QT_DIR_PATH"
+	echo "QT:$QT_DIR_PATH"
 	export QT_DIR_PATH=$QT_DIR_PATH
 }
 
