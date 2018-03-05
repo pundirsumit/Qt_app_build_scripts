@@ -6,6 +6,7 @@ Before you run/use the script<br />
     - download sdk and update sdkmanager with latest API plaforms<br />
     - download latest ndk<br />
     - download latest Qt tools<br />
+    - Install ant on your system.<br />
 <br />
 
 Run 'source envsetup.sh' to set<br />
