@@ -1,6 +1,9 @@
 #!/bin/sh
 MYDIR="$(dirname $(realpath $0))"
 
+# To check the sdk tools dependency and should be added in each of the app scripts.
+./qtenv_setup.sh
+
 #Should be same as the name of the .pro file in the Qt project folder.
 MODULE=qt2048
 
